@@ -1,3 +1,7 @@
+# Profile Dashboard and Settings with React
+
+![2105fc29-4db5-40c6-968f-12537e95adf0](https://github.com/user-attachments/assets/70e02a57-b3fc-4ef0-9ac5-1d18c1f6c9da)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
