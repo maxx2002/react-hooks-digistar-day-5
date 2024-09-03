@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "./Modal"; // Make sure the Modal component is correctly imported
+import Modal from "./Modal";
 
 interface Links {
   facebook: string;
