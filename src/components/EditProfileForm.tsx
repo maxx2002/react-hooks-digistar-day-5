@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaCheckCircle, FaRegCircle } from "react-icons/fa";
 import Modal from "./Modal";
 
@@ -41,6 +41,13 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({
     postalCode: useRef<HTMLInputElement>(null),
     phoneNumber: useRef<HTMLInputElement>(null),
   };
+
+  useEffect(() => {
+    const firstErrorField = Object.keys(errors)[0];
+    if (firstErrorField && refs[firstErrorField as keyof typeof refs].current) {
+      refs[firstErrorField as keyof typeof refs].current?.focus();
+    }
+  }, [errors]);
 
   const handleProfileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTempProfile({ ...tempProfile, [e.target.name]: e.target.value });
